@@ -8,9 +8,9 @@ export default function Forecast({ forecast }) {
   );
 
   return (
-    <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mt-5 max-w-5xl mx-auto max-w-md mx-auto mt-6">
+    <div className="grid w-full grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
       {dailyForecast.map((day, index) => (
-        <div key={index} className="bg-black/20 backdrop-blur-md rounded-xl shadow-lg p-1 text-center">
+        <div key={index} className="bg-black/20 backdrop-blur-md rounded-xl shadow-lg p-3 text-center">
           <p className="font-semibold text-gray-800">
             {new Date(day.dt * 1000).toLocaleDateString("en-US", { weekday: "short", day: "numeric" })}
           </p>
