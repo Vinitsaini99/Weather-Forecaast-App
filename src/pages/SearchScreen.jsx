@@ -29,10 +29,10 @@ export default function SearchScreen() {
   };
 
   return (
-    <div className="flex flex-col min-h-full items-center justify-start px-4 py-6 sm:px-6">
-      
-      <div className="w-full max-w-sm sm:max-w-md mb-6">
-        <div className="flex gap-2">
+    <div className="flex flex-col flex-1 w-full items-center justify-center px-4 py-6 sm:px-6">
+      <div className="w-full flex justify-center mb-6">
+        <div className="w-full max-w-md">
+          <div className="flex gap-2">
           <input
             type="text"
             className="border rounded-lg p-2 flex-1 text-sm sm:text-base"
@@ -46,14 +46,17 @@ export default function SearchScreen() {
           >
             Search
           </button>
+          </div>
+          {error && <p className="text-red-500 mt-2 text-sm">{error}</p>}
         </div>
-        {error && <p className="text-red-500 mt-2 text-sm">{error}</p>}
       </div>
 
       
-      <div className="w-full max-w-sm sm:max-w-md space-y-6">
-        <WeatherCard weather={weather} />
-        <Forecast forecast={forecast} />
+      <div className="w-full flex justify-center">
+        <div className="w-full max-w-3xl space-y-6">
+          <WeatherCard weather={weather} />
+          <Forecast forecast={forecast} />
+        </div>
       </div>
     </div>
   );
