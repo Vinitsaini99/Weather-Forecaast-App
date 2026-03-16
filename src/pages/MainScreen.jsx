@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import SeasonSlider from "../components/SeasonSlider";
+import SeasonSlider from "../components/SeasonSlider.jsx";
 
 export default function MainScreen() {
   const [bgGradient, setBgGradient] = useState(
@@ -8,10 +8,10 @@ export default function MainScreen() {
 
   return (
     <div
-      className={`flex flex-col items-center justify-center min-h-screen bg-gradient-to-r ${bgGradient} transition-all duration-700`}
+      className={`flex flex-col items-center justify-center h-screen overflow-hidden transition-all duration-700 bg-gradient-to-r ${bgGradient}`}
     >
-      <div className="bg-white/80 backdrop-blur-md p-8 rounded-2xl shadow-lg max-w-2xl w-[90%] text-center space-y-6">
-        <h2 className="text-2xl font-bold text-gray-800">
+      <div className="bg-white/80 backdrop-blur-md p-6 md:p-8 rounded-2xl shadow-lg max-w-2xl w-[90%] text-center space-y-6">
+        <h2 className="text-xl md:text-2xl font-bold text-gray-800">
           🌤 Seasonal Weather Showcase
         </h2>
 
