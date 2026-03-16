@@ -35,7 +35,7 @@ export default function App() {
       </header>
 
      
-      <main className="flex-grow">
+      <main className="flex-1 flex min-h-0">
         {screen === "main" ? <MainScreen /> : <SearchScreen />}
       </main>
 
