@@ -5,7 +5,7 @@ export default function WeatherCard({ weather }) {
   if (!weather) return null;
 
   return (
-    <div className="w-full max-w-sm mx-auto mt-6 
+    <div className="w-full max-w-sm mx-auto 
       bg-gradient-to-br from-blue-400/30 via-blue-500/20 to-indigo-600/20 
       backdrop-blur-xl shadow-lg rounded-2xl p-6 text-center 
       border border-blue-300/30">
